@@ -224,21 +224,6 @@ function getDayOfWeek(date) {
     var chiMax4 = Math.ceil(c_max4.list[30].main.temp_max) + '°';
     document.getElementById("chiMax4").innerHTML = chiMax4;
 
-//Day 5*****************************
-    var cDayFive = JSON.parse(chiForecast.response);
-    var chiDay5 = (cDayFive.list[38].dt_txt);
-    chiDay5 = getDayOfWeek(chiDay5) + "     " +  (chiDay5.substring(5,10));
-    document.getElementById("chiDay5").innerHTML = chiDay5;
-
-    //description
-    var c_desc5 = JSON.parse(chiForecast.response);
-    var chiD5 = c_desc5.list[38].weather[0].description.toUpperCase();
-    document.getElementById("chiD5").innerHTML = chiD5;
-
-    //temp
-    var c_max5 = JSON.parse(chiForecast.response);
-    var chiMax5 = Math.ceil(c_max5.list[38].main.temp_max) + '°';
-    document.getElementById("chiMax5").innerHTML = chiMax5;
 
 
 //    DAL CALL_________________________________________________________________
@@ -308,21 +293,6 @@ function getDayOfWeek(date) {
     var dalMax4 = Math.ceil(d_max4.list[30].main.temp_max) + '°';
     document.getElementById("dalMax4").innerHTML = dalMax4;
 
-//Day 5*****************************
-    var dDayFive = JSON.parse(dalForecast.response);
-    var dalDay5 = (dDayFive.list[38].dt_txt);
-    dalDay5 = getDayOfWeek(dalDay5) + "     " + (dalDay5.substring(5,10));
-    document.getElementById("dalDay5").innerHTML = dalDay5;
-
-    //description
-    var d_desc5 = JSON.parse(chiForecast.response);
-    var dalD5 = d_desc5.list[38].weather[0].description.toUpperCase();
-    document.getElementById("dalD5").innerHTML = dalD5;
-
-    //temp 
-    var d_max5 = JSON.parse(dalForecast.response);
-    var dalMax5 = Math.ceil(d_max5.list[38].main.temp_max) + '°';
-    document.getElementById("dalMax5").innerHTML = dalMax5;
 
 
 //    MPLS CALL_________________________________________________________________
@@ -390,7 +360,11 @@ function getDayOfWeek(date) {
     var mplsMax4 = Math.ceil(mn_max4.list[30].main.temp_max) + '°';
     document.getElementById("mplsMax4").innerHTML = mplsMax4;
 
-//Day 5*****************************
+
+//Day 5s
+
+
+//Day 5*****************************MPLS
     var mnDayFive = JSON.parse(mplsForecast.response);
     var mplsDay5 = (mnDayFive.list[38].dt_txt);
     mplsDay5 = getDayOfWeek(mplsDay5) + "     " + (mplsDay5.substring(5,10));
@@ -406,13 +380,58 @@ function getDayOfWeek(date) {
     var mplsMax5 = Math.ceil(mn_max5.list[38].main.temp_max) + '°';
     document.getElementById("mplsMax5").innerHTML = mplsMax5;
 
+//Day 5*****************************DAL
+    var dDayFive = JSON.parse(dalForecast.response);
+    var dalDay5 = (dDayFive.list[38].dt_txt);
+    dalDay5 = getDayOfWeek(dalDay5) + "     " + (dalDay5.substring(5,10));
+    document.getElementById("dalDay5").innerHTML = dalDay5;
+
+    //description
+    var d_desc5 = JSON.parse(chiForecast.response);
+    var dalD5 = d_desc5.list[38].weather[0].description.toUpperCase();
+    document.getElementById("dalD5").innerHTML = dalD5;
+
+    //temp 
+    var d_max5 = JSON.parse(dalForecast.response);
+    var dalMax5 = Math.ceil(d_max5.list[38].main.temp_max) + '°';
+    document.getElementById("dalMax5").innerHTML = dalMax5;
 
 
 
+//Day 5*****************************CHI
+    var cDayFive = JSON.parse(chiForecast.response);
+    var chiDay5 = (cDayFive.list[38].dt_txt);
+    chiDay5 = getDayOfWeek(chiDay5) + "     " +  (chiDay5.substring(5,10));
+    document.getElementById("chiDay5").innerHTML = chiDay5;
+
+    //description
+    var c_desc5 = JSON.parse(chiForecast.response);
+    var chiD5 = c_desc5.list[38].weather[0].description.toUpperCase();
+    document.getElementById("chiD5").innerHTML = chiD5;
+
+    //temp
+    var c_max5 = JSON.parse(chiForecast.response);
+    var chiMax5 = Math.ceil(c_max5.list[38].main.temp_max) + '°';
+    document.getElementById("chiMax5").innerHTML = chiMax5;
 
 
 
+//Day 5*****************************MIL
+    var mDayFive = JSON.parse(mkeForecast.response);
+    var mkeDay5 =(mDayFive.list[38].dt_txt);
+    mkeDay5 = getDayOfWeek(mkeDay5) + "     " +  (mkeDay5.substring(5,10));
+    document.getElementById("mkeDay5").innerHTML = mkeDay5;
 
+    //description
+    var m_desc5 = JSON.parse(mkeForecast.response);
+    var mkeD5 = m_desc4.list[38].weather[0].description.toUpperCase();
+    document.getElementById("mkeD5").innerHTML = mkeD5;
+
+
+    //temp 
+    var m_max5 = JSON.parse(mkeForecast.response);
+    var mkeMax5 = Math.ceil(m_max5.list[38].main.temp_max) + '°';
+    document.getElementById("mkeMax5").innerHTML = mkeMax5;
 
 
 
